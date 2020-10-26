@@ -1,0 +1,383 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* You can add global styles to this file, and also import other style files */
+
+
+/*@import '~@sweetalert2/theme-wordpress-admin/wordpress-admin.scss';*/
+
+@import '~@sweetalert2/theme-dark/dark.scss';
+html,
+body {
+    height: 100%;
+    background: #ecf0f3;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+
+/* ------  login page styles ------  */
+
+:root {
+    --input-padding-x: 1.5rem;
+    --input-padding-y: 0.75rem;
+}
+
+.login,
+.image {
+    min-height: 100vh;
+}
+
+.bg-image {
+    background: linear-gradient(to right, black, #ecf0f3 100%);
+}
+
+.bg-image>img {
+    position: absolute;
+    width: 80%;
+    height: 25%;
+    left: 45%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    border-radius: 40px;
+    /*
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ecf0f3;
+    background: url('../assets/img/tp-training-lab-launcher.png') no-repeat center;
+    background-size: 700px 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 15%;
+    min-height: auto;
+    */
+}
+
+.logo-form-login {
+    background: url('../assets/img/tools1.png');
+    background-size: 200px 90px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 100px;
+    border-radius: 10%;
+    margin: 0 auto;
+}
+
+.title-form-login {
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+}
+
+.sub-title-form-login {
+    text-align: center;
+    font-size: 15px;
+    padding-top: 7px;
+}
+
+.login-div {
+    padding: 40px 35px 35px 35px;
+    border-radius: 40px;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+}
+
+.login-heading {
+    font-weight: 300;
+}
+
+.form-login {
+    width: 100%;
+    padding: 25px 5px 5px 5px;
+}
+
+.btn-login {
+    font-size: 0.9rem;
+    color: #fff;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+    border-radius: 2rem;
+    background-color: #3047B0;
+    box-shadow: 4px 4px 9px #b1b1b1, -3px -3px 8px #ffffff;
+    transition: 0.5s;
+}
+
+.form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.form-label-group>input {
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
+}
+
+.form-label-group>input,
+.form-label-group>label {
+    background: none;
+    padding: var(--input-padding-y) var(--input-padding-x);
+    height: auto;
+    border-radius: 2rem;
+}
+
+.form-label-group>label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    /* Override default `<label>` margin */
+    line-height: 1.5;
+    color: #495057;
+    cursor: text;
+    /* Match the input under the label */
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: all .1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+    color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+    color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+    color: transparent;
+}
+
+.form-label-group input::placeholder {
+    color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+    padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+    padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown)~label {
+    padding-top: calc(var(--input-padding-y) / 3);
+    padding-bottom: calc(var(--input-padding-y) / 3);
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* Fallback for Edge
+-------------------------------------------------- */
+
+@supports (-ms-ime-align: auto) {
+    .form-label-group>label {
+        display: none;
+    }
+    .form-label-group input::-ms-input-placeholder {
+        color: #777;
+    }
+}
+
+
+/* Fallback for IE
+-------------------------------------------------- */
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .form-label-group>label {
+        display: none;
+    }
+    .form-label-group input:-ms-input-placeholder {
+        color: #777;
+    }
+}
+
+
+/* ------- end login styles -------    */
+
+
+/* -------  home layout styles    ------------*/
+
+.main-background {
+    background: url("../assets/img/tp-tools-background3.png") no-repeat center center fixed, linear-gradient(to bottom, rgba(209, 212, 215, 1)50%, rgba(248, 249, 250, 0.5) 100%);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: 100% 100%;
+    background-position: contain;
+    -o-background-size: cover;
+}
+
+
+/*  navbar  */
+
+#mainNav {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    box-shadow: 13px 13px 20px #bdbebf, -13px -13px 20px #ffffff;
+}
+
+#mainNav .navbar-brand {
+    color: #fff;
+}
+
+#mainNav .navbar-nav {
+    margin-top: 1rem;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link {
+    color: #bdbebf;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+    color: #000000;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:active,
+#mainNav .navbar-nav li.nav-item a.nav-link:focus {
+    color: #000000;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link.active {
+    color: #000000;
+}
+
+#mainNav .navbar-toggler {
+    font-size: 80%;
+    padding: 0.8rem;
+}
+
+@media (min-width: 992px) {
+    #mainNav {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        transition: padding-top 0.3s, padding-bottom 0.3s;
+    }
+    #mainNav .navbar-brand {
+        font-size: 1.75em;
+        transition: font-size 0.3s;
+    }
+    #mainNav .navbar-nav {
+        margin-top: 0;
+    }
+    #mainNav .navbar-nav>li.nav-item>a.nav-link.active {
+        color: #bdbebf;
+        background: #000000;
+    }
+    #mainNav .navbar-nav>li.nav-item>a.nav-link.active:active,
+    #mainNav .navbar-nav>li.nav-item>a.nav-link.active:focus,
+    #mainNav .navbar-nav>li.nav-item>a.nav-link.active:hover {
+        color: #bdbebf;
+        background: #000000;
+    }
+    #mainNav.navbar-shrink {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    #mainNav.navbar-shrink .navbar-brand {
+        font-size: 1.5em;
+    }
+}
+
+.bg-tp {
+    background-color: #354052;
+}
+
+.bg-tp-footer {
+    background-color: #000000;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
+.footer-img {
+    max-width: 10rem;
+    height: auto;
+}
+
+
+/* css styles porfolio */
+
+section {
+    display: block;
+}
+
+.page-section {
+    padding-top: 11%;
+    padding-bottom: 10%;
+    padding-left: 2%;
+    padding-right: 2%;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio .portfolio-item {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    max-width: 25rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+}
+
+.portfolio .portfolio-item .portfolio-item-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(203, 206, 209, 0.5);
+}
+
+.portfolio .portfolio-item .portfolio-item-caption:hover {
+    opacity: 1;
+}
+
+.portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
+    font-size: 2.5rem;
+}
+
+
+/*-----------------------*/
+
+
+/* responsive  */
+
+@media only screen and (max-width: 991px) {
+    .avatar i {
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .page-section {
+        padding-top: 19%;
+        padding-bottom: 14%;
+    }
+}
+
+.main {
+    width: 100%;
+    padding: 0 120px;
+    overflow: hidden;
+}
+
+@media only screen and (max-width:800px) {
+    /* For tablets: */
+    .page-section {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    .page-section {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+}

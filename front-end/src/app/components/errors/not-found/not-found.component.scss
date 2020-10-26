@@ -1,0 +1,32 @@
+button {
+    font-family: "Nunito Sans";
+}
+
+ul {
+    list-style-type: none;
+    padding-inline-start: 35px;
+}
+
+svg {
+    width: 100%;
+}
+
+h1 {
+    font-size: 7.5em;
+    margin: 15px 0px;
+    font-weight: bold;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+@media screen and (max-width:768px) {
+    body {
+        display: block;
+    }
+    .container {
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+}

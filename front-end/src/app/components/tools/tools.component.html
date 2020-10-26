@@ -1,0 +1,37 @@
+<div class="portfolio">
+    <div class="row justify-content-center">
+        <div *ngIf="!TPBookBool && !TPsimulationBool && !TPArcadeBool" class="col-md-9 text-center mt-5">
+            <app-not-found></app-not-found>
+        </div>
+        <div *ngIf="TPBookBool" class="col-md-6 col-lg-4 mt-5">
+            <div class="portfolio-item mx-auto py-2" data-toggle="modal" data-target="#portfolioModal1">
+                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                    <div class="portfolio-item-caption-content text-center text-white">
+                        <button type="button" class="btn btn-lg btn-secondary" (click)="go_to_TPbook()">Go to TP Book</button>
+                    </div>
+                </div>
+                <img class="img-fluid" src="assets/img/tools/TPbook.png" alt="" />
+            </div>
+        </div>
+        <div *ngIf="TPsimulationBool" class="col-md-6 col-lg-4 mt-5">
+            <div class="portfolio-item mx-auto py-2" data-toggle="modal" data-target="#portfolioModal2">
+                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                    <div class="portfolio-item-caption-content text-center text-white">
+                        <button type="button" class="btn btn-lg btn-secondary" (click)="go_to_TPsimulation()">Go to TP Simulation</button>
+                    </div>
+                </div>
+                <img class="img-fluid" src="assets/img/tools/TPsimulation.png" alt="" />
+            </div>
+        </div>
+        <div *ngIf="TPArcadeBool" class="col-md-6 col-lg-4 mt-5">
+            <div class="portfolio-item mx-auto py-2" data-toggle="modal" data-target="#portfolioModal3">
+                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                    <div class="portfolio-item-caption-content text-center text-white">
+                        <button type="button" class="btn btn-lg btn-secondary" (click)="go_to_TParcade()">Go to TP Arcade</button>
+                    </div>
+                </div>
+                <img class="img-fluid" src="assets/img/tools/TParcade.png" alt="" />
+            </div>
+        </div>
+    </div>
+</div>

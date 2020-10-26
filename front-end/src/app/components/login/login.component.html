@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <div class="row no-gutter">
+        <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image">
+            <img src="../../../assets/img/tp-training-lab-launcher.png">
+        </div>
+        <div class="col-md-8 col-lg-6">
+            <div class="login d-flex align-items-center py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9 col-lg-8 mx-auto">
+                            <div class="login-div">
+                                <div class="logo-form-login"></div>
+                                <div class="title-form-login">Welcome!</div>
+                                <div class="sub-title-form-login">Login with your CCMS credentials</div>
+                                <form [formGroup]="form" class="form-login" (ngSubmit)="login(form.valid)">
+                                    <div class="form-label-group">
+                                        <input type="text" id="user" class="form-control" placeholder="User" required autofocus formControlName="user">
+                                        <label for="user">User</label>
+                                    </div>
+
+                                    <div class="form-label-group">
+                                        <input type="password" id="password" class="form-control" placeholder="Password" formControlName="password" (enter)="login(form.valid)" required>
+                                        <label for="password">Password</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Remind me</label>
+                                    </div>
+                                    <button class="btn btn-lg  btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" [disabled]="form.invalid">Login</button>
+                                </form>
+                                <div *ngIf="cargando" class="alert alert-info p-1 mt-2 text-center" role="alert">
+                                    <i class="fa fa-sync-alt fa-spin fa-1x"></i>
+                                </div>
+
+                                <div *ngIf="datos_incorrectos" class="alert alert-danger p-1 mt-2 text-center" role="alert">
+                                    <h6 class="alert-heading">Datos incorrectos</h6>
+                                    <i class="fa fa-exclamation fa-1x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
