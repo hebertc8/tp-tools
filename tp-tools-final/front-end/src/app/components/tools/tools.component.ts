@@ -46,8 +46,8 @@ export class ToolsComponent implements OnInit {
 
   // @ts-ignore
   go_to_TPbook(){
-    this.network_user = 'cliente.test';
-    this.document = 'Colombia2020*';
+    this.network_user = this.dataUser.username;
+    this.document = this.dataUser.document;
     let tpbook_site =  window.open(this.TPbookURL+"/?user=" + `${this.network_user}` + "&pass=" + `${this.document}` , '_blank',)
     //window.open("https://tpbook.teleperformance.co/?user=" + `${this.network_user}` + "&pass=" + `${this.document}` , '_self')
     setTimeout( function () { tpbook_site.location.href = "https://tpbookns.teleperformance.co" ; }, 3500);
@@ -105,7 +105,6 @@ export class ToolsComponent implements OnInit {
           if(value){
             for (let i = 0; i< this.dataUser.TPArcade.length; i++){
               if(this.dataUser.TPArcade[i].Arcade_Game_Name.includes(value)){
-                console.log("??")
                 window.open(this.dataUser.TPArcade[i].Arcade_Link, "_blank")
               }
             }

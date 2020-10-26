@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row no-gutter">
         <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image">
-            <img src="../../../assets/img/tp-training-lab-launcher.png">
+            <img src="../../../assets/img/tp-training-lab-launcher.png" alt="TP Training Image">
         </div>
         <div class="col-md-8 col-lg-6">
             <div class="login d-flex align-items-center py-5">
@@ -30,12 +30,12 @@
                                     <button class="btn btn-lg  btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" [disabled]="form.invalid">Login</button>
                                 </form>
                                 <div *ngIf="cargando" class="alert alert-info p-1 mt-2 text-center" role="alert">
-                                    <i class="fa fa-sync-alt fa-spin fa-1x"></i>
+                                    <em class="fa fa-sync-alt fa-spin fa-1x"></em>
                                 </div>
 
                                 <div *ngIf="datos_incorrectos" class="alert alert-danger p-1 mt-2 text-center" role="alert">
-                                    <h6 class="alert-heading">Datos incorrectos</h6>
-                                    <i class="fa fa-exclamation fa-1x"></i>
+                                    <h6 class="alert-heading">Wrong username or password</h6>
+                                    <em class="fa fa-exclamation fa-1x"></em>
                                 </div>
                             </div>
                         </div>

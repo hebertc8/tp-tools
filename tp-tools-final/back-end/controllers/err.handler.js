@@ -5,13 +5,13 @@ let errorHandler = (err, req, res, next) => {
     let ip = req.clientIp;
     let date = new Date()
     console.log(date, "ip: " + ip, req.originalUrl, err.name)
-    
+
     if (err.name === 'UnauthorizedError') {
-        res.status(401).json({message: 'UnauthorizedError', code: 400})
+        res.status(401).json({ message: 'UnauthorizedError', code: 400 })
     } else if (err.name === 'ForbiddenError') {
-        res.status(401).json({message: 'ForbiddenError', code: 401})
+        res.status(401).json({ message: 'ForbiddenError', code: 401 })
     } else {
-        res.status(401).json({message: 'Unknown error: ' + err.name, code: 400})
+        res.status(401).json({ message: 'Unknown error: ' + err.name, code: 400 })
     }
 }
 
@@ -55,11 +55,8 @@ let middleware = (req, res, next) => {
         req.user = data
         next()
     } catch (error) {
-        if (req.originalUrl == '/api/ccmslogin' || req.originalUrl == '/api/test' || req.originalUrl == '/api/test2') {
-            next()
-        } else {
-            next()
-        }
+        console.log(error)
+        next()
     }
 }
 
